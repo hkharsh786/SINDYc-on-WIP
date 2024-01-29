@@ -4,7 +4,7 @@
 n = 2; %no of states
 x0=[0;0];  % Initial condition
 
-dt = 0.01;  % Time step
+dt = 0.001;  % Time step
 
 
 if ONLY_TRAINING_LENGTH == 1
@@ -30,7 +30,7 @@ switch InputSignalType
     case 'input2'
         A=5;
         B = 10;
-        forcing = @(x,t) [(A +B*(sin(1*pi*t)))];
+        forcing = @(x,t) [(A*(sin(0.1*pi*t)) +B*(sin(0.5*pi*t)))];
         [t,x]=ode45(@(t,x) pendulum_system(t,x,forcing(x,t)),tspan,x0,options);
         u = forcing(0,tspan);
 end

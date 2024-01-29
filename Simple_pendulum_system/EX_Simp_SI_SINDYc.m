@@ -4,10 +4,10 @@ datapath = './DATA/simP/';
 mkdir(figpath)
 mkdir(datapath)
 
-SystemModel = 'pendulum_system';
+SystemModel = 'pendulum_system dt0.02';
 
 %% Generate Data 
-InputSignalType = 'torque'; %torque or input2
+InputSignalType = 'input2'; %torque or input2
 ONLY_TRAINING_LENGTH = 1;
 getTrainingData
 u = u'; uv=uv';
@@ -17,9 +17,9 @@ u = u'; uv=uv';
 ModelName = 'SINDYc'; 
 % iModel = 2;
 Nvar = 2;
-polyorder = 2;
+polyorder = 1;
 usesine = 1;
-lambda = 0.1;
+lambda = 1;
 eps = 0;
 
 %Add noise
