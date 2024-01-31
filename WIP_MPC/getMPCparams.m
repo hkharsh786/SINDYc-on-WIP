@@ -1,0 +1,11 @@
+N  = 50;                            % Prediction horizon (number of iterations)
+Nu  = 50;                            % Control horizon (number of iterations)           
+Q = [10000000000 10000 100000000000000 10000000000];                    % State weights
+R = 0.1;                              % du weights
+Ru = 0.1;                             % u weights
+LB = -84*ones(Nu,1);                  % Lower bound of control input
+UB = 84*ones(Nu,1);                  % Upper bound of control input
+LBdu = -10000;                         % Lower bound of control input rate
+UBdu = 10000;                         % Upper bound of control input rate
+LBo = [-1, -100,-10*pi/180,-80*pi/180];                            % Lower bound of output
+UBo = [50, 100,10*pi/180,80*pi/180];                           % Upper bound of output
