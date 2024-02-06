@@ -111,7 +111,7 @@ ylim([-0.5, 2]);
 
 %% animation plot
 
-% simulatedWIP
+ simulatedWIP
 
 % 
 % 
