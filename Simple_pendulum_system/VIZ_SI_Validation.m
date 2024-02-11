@@ -14,6 +14,7 @@ ph(3) = plot(tB,xB(:,1),'-.','Color',ccolors(1,:)-[0 0.2 0.2],'LineWidth',2);
 ph(4) = plot(tB,xB(:,2),'-.','Color',ccolors(2,:)-[0.1 0.2 0.09],'LineWidth',2);
 grid off
 xlim([0 tB(end)])
+ylim([-50 100])
 xlabel('Time')
 ylabel('xi')
 legend(ph([1,2,3,4]),'M-Angle', 'M-Angular Velocity','S-Angle', 'S-Angular Velocity')
